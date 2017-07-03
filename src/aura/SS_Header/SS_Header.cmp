@@ -1,0 +1,9 @@
+<!--
+ - Created by chris.baldock on 27/6/17.
+ -->
+
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" description="SS_Header">
+    <div class="slds-text-heading_large" style="justify-content: center; align-content: center; display: grid; height: 15rem;">
+        Insert Header Banner Here
+    </div>
+</aura:component>

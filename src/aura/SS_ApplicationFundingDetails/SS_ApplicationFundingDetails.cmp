@@ -1,0 +1,15 @@
+<!--
+ - Created by chris.baldock on 21/6/17.
+ -->
+
+<aura:component extends="c:SS_ApplicationSection" description="SS_ApplicationFundingDetails">
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <span class="slds-text-heading_small">Funding Details</span>
+
+    <div style="margin-top: 1.5rem;">
+        <lightning:button iconName="utility:close" variant="neutral" label="Exit" />
+        <lightning:button iconName="utility:forward" variant="neutral" label="Next" />
+    </div>
+
+</aura:component>

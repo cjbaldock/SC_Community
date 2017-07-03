@@ -1,0 +1,26 @@
+<!--
+ - Created by chris.baldock on 21/6/17.
+ -->
+
+<aura:component implements="forceCommunity:availableForAllPageTypes, flexipage:availableForAllPageTypes" access="global" description="SS_Application">
+    <aura:attribute name="applicationState" type="Object" default="{}" description="JSON object to represent the state of an application" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <div style="justify-content: center; display: flex; margin: 1.5rem 5rem 0rem 0rem;">
+        <div style="width: 700px;">
+
+            <div class="slds-text-heading_large">
+                Create Account
+            </div>
+            <c:SS_ApplicationSectionBar activeSection="{!v.applicationState.activeSection}"/>
+            <c:SS_ApplicationContactDetails activeSection="{!v.applicationState.activeSection}"/>
+            <c:SS_ApplicationBusinessDetails activeSection="{!v.applicationState.activeSection}"/>
+            <c:SS_ApplicationApplicantDetails activeSection="{!v.applicationState.activeSection}"/>
+            <c:SS_ApplicationFundingDetails activeSection="{!v.applicationState.activeSection}"/>
+            <c:SS_ApplicationAccountSummary activeSection="{!v.applicationState.activeSection}"/>
+
+        </div>
+    </div>
+
+</aura:component>

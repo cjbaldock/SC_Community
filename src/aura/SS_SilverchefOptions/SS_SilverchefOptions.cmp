@@ -1,0 +1,13 @@
+<!--
+ - Created by chris.baldock on 29/6/17.
+ -->
+
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" description="SS_SilverchefOptions">
+    <div style="justify-content: center; display: flex; margin-top: 1.5rem; margin-bottom: 5rem;">
+        <div style="display: block;">
+            <div class="slds-text-heading_large">
+                Silverchef Options
+            </div>
+        </div>
+    </div>
+</aura:component>

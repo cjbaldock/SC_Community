@@ -1,0 +1,41 @@
+<!--
+ - Created by chris.baldock on 21/6/17.
+ -->
+
+<aura:component extends="c:SS_ApplicationSection"  description="SS_ApplicationContactDetails">
+    <aura:attribute name="activeSubSection" type="String" description="Section to be displayed" default="section1"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <div>
+        <!-- Section 1 -->
+        <div class="{!((v.activeSubSection == 'section1') ? 'slds-show' : 'slds-hide') }">
+            <span class="slds-text-heading_small">Contact Details</span>
+            <div style="margin-top: 1rem;">
+                <lightning:input label="First Name" name="firstName" type="text" />
+                <lightning:input label="Last Name" name="lastName" type="text" />
+                <lightning:input label="Mobile" name="mobile" type="number" />
+                <lightning:input label="Email" name="email" type="email" />
+                <lightning:input label="Business Trading Name" name="businesstradingname" type="text" />
+            </div>
+            <div style="margin-top: 1.5rem;">
+                <lightning:button iconName="utility:close" variant="neutral" label="Exit" onclick="{!c.exitApplication}"/>
+                <lightning:button iconName="utility:forward" variant="neutral" label="Next" onclick="{!c.nextSection}" />
+            </div>
+        </div>
+        <!-- Section 2 -->
+        <div class="{!((v.activeSubSection == 'section2') ? 'slds-show' : 'slds-hide') }">
+            <span class="slds-text-heading_small">We found an existing account that matches these details</span>
+            <div style="margin-top: 0.5rem;">
+                Select an account from the list below to continue with an existing account, otherwise, continue creating a new account.
+            </div>
+            <div style="margin-top: 1.0rem;">
+                <lightning:button iconName="utility:forward" variant="neutral" label="Continue with new Account" onclick="{!c.nextSection}"/>
+            </div>
+            <div class="slds-text-heading_large" style="justify-content: center; align-content: center; display: grid; margin-top: 1.5rem; height: 15rem; border: 1px solid black;">
+                Matching Accounts Table Goes Here
+            </div>
+        </div>
+    </div>
+
+</aura:component>

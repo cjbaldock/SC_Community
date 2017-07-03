@@ -1,0 +1,21 @@
+<!--
+ - Created by chris.baldock on 21/6/17.
+ -->
+
+<aura:component description="SS_NavigationBarItem">
+    <aura:attribute name="pageKey" type="String" description="Page name used for URL navigation" />
+    <aura:attribute name="pageLabel" type="String" description="Page label displayed" />
+    <aura:attribute name="iconKey" type="String" description="SLDS Icon Key" default="utility:stop" />
+
+    <a onclick="{!c.navigateToPage}">
+        <div style="padding: 0.5rem;">
+            <div style="justify-content: center; display: flex; padding-bottom: 0.5rem;">
+                <lightning:icon iconName="{!v.iconKey}" size="large" />
+            </div>
+            <div style="justify-content: center; display: flex;">
+                {!v.pageLabel}
+            </div>
+        </div>
+    </a>
+
+</aura:component>

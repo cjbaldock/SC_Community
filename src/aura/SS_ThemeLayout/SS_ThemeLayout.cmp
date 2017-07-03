@@ -1,0 +1,21 @@
+<!--
+ - Created by chris.baldock on 21/6/17.
+ -->
+
+<aura:component description="SS_ThemeLayout" implements="forceCommunity:themeLayout" access="global" >
+    <aura:attribute name="topBanner" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="navigationBar" type="Aura.Component[]" required="false"/>
+
+    <div>
+        <div>
+            {!v.topBanner}
+        </div>
+        <div>
+            {!v.navigationBar}
+        </div>
+        <div>
+            {!v.body}
+        </div>
+    </div>
+
+</aura:component>

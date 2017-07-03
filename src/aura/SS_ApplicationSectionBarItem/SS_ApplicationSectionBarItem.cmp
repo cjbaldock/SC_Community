@@ -1,0 +1,22 @@
+<!--
+ - Created by chris.baldock on 21/6/17.
+ -->
+
+<aura:component description="SS_ApplicationSectionBarItem">
+    <aura:attribute name="activeSection" type="String" description="Section Name" default="Contact Details"/>
+    <aura:attribute name="sectionKey" type="String" description="Unique key for the linked section" />
+    <aura:attribute name="sectionName" type="String" description="Section Name" default="Contact Details"/>
+    <aura:attribute name="iconName" type="String" description="Icon Name" default="company"/>
+
+    <a onclick="{!c.updateActiveSection}">
+        <div style="{!'padding: 0.5rem; '+((v.sectionKey == v.activeSection) ? 'border-top: 1px solid black; border-left: 1px solid black; border-right: 1px solid black;' : 'border: 1px solid black;')}">
+            <div style="justify-content: center; display: flex; padding-bottom: 0.5rem;">
+                <lightning:icon iconName="{!'utility:'+v.iconName}" size="medium" />
+            </div>
+            <div style="justify-content: center; display: flex;">
+                    {!v.sectionName}
+            </div>
+        </div>
+    </a>
+
+</aura:component>

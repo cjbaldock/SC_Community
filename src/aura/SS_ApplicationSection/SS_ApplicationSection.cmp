@@ -1,0 +1,12 @@
+<!--
+ - Created by chris.baldock on 27/6/17.
+ -->
+
+<aura:component extensible="true" description="SS_ApplicationSection">
+    <aura:attribute name="activeSection" type="String" description="the current active application section" />
+    <aura:attribute name="linkedSection" type="String" description="the related application section" />
+
+    <div style="margin-top: 1.5rem;" class="{!((v.linkedSection == v.activeSection) ? 'slds-show' : 'slds-hide') }">
+        {!v.body}
+    </div>
+</aura:component>

@@ -1,0 +1,31 @@
+<!--
+ - Created by chris.baldock on 21/6/17.
+ -->
+
+<aura:component description="SS_ApplicationSectionBar">
+    <aura:attribute name="activeSection" type="String" description="the current active application section" />
+
+    <div style="justify-content: center; display: flex; margin: 1rem 0.5rem 0rem 0rem;">
+        <c:SS_ApplicationSectionBarItem activeSection="{!v.activeSection}"
+                                        sectionKey="contactDetails"
+                                        sectionName="Contact Details"
+                                        iconName="identity"
+                                        />
+        <c:SS_ApplicationSectionBarItem activeSection="{!v.activeSection}"
+                                        sectionKey="businessDetails"
+                                        sectionName="Business Details"
+                                        iconName="company"/>
+        <c:SS_ApplicationSectionBarItem activeSection="{!v.activeSection}"
+                                        sectionKey="applicantDetails"
+                                        sectionName="Applicant Details"
+                                        iconName="groups"/>
+        <c:SS_ApplicationSectionBarItem activeSection="{!v.activeSection}"
+                                        sectionKey="fundingDetails"
+                                        sectionName="Funding Details"
+                                        iconName="moneybag"/>
+        <c:SS_ApplicationSectionBarItem activeSection="{!v.activeSection}"
+                                        sectionKey="accountSummary"
+                                        sectionName="Account Summary"
+                                        iconName="description"/>
+    </div>
+</aura:component>

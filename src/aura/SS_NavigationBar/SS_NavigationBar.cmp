@@ -1,0 +1,13 @@
+<!--
+ - Created by chris.baldock on 21/6/17.
+ -->
+
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" description="SS_NavigationBar">
+    <div style="justify-content: center; display: flex; margin: 0.5rem 0.5rem 0rem 0rem; border-top: 1px solid black; border-bottom: 1px solid black;">
+        <c:SS_NavigationBarItem pageKey="accountdashboard" pageLabel="Account Dashboard" iconKey="utility:list"/>
+        <c:SS_NavigationBarItem pageKey="newaccount" pageLabel="Create Account" iconKey="utility:adduser"/>
+        <c:SS_NavigationBarItem pageKey="accountsearch" pageLabel="Find Accounts" iconKey="utility:company"/>
+        <c:SS_NavigationBarItem pageKey="rentalcalculator" pageLabel="Rental Calculator" iconKey="utility:table"/>
+        <c:SS_NavigationBarItem pageKey="contactsupport" pageLabel="Contact Silverchef" iconKey="utility:call" />
+    </div>
+</aura:component>
